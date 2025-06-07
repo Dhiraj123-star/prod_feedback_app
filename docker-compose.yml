@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  couchdb:
+    image: couchdb:3
+    restart: always
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=strongpassword
+    ports:
+      - "5984:5984"
+    volumes:
+      - couchdb_data:/opt/couchdb/data
+
+  fastapi:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - couchdb
+
+volumes:
+  couchdb_data:
