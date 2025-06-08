@@ -5,3 +5,6 @@ couchdb
 python-jose[cryptography]
 passlib[bcrypt]
 requests
+email-validator
+python-multipart
+sqlalchemy

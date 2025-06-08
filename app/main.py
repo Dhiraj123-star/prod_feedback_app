@@ -1,7 +1,11 @@
 from fastapi import FastAPI
-from app.routes import auth,feedback
+from app import models
+from app.database import engine
+from app.routes import auth, feedback
 
-app = FastAPI(title="Production Grade Feedback System")
+models.Base.metadata.create_all(bind=engine)
+
+app = FastAPI()
 
 app.include_router(auth.router)
 app.include_router(feedback.router)
