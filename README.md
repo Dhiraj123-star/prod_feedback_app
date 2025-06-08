@@ -44,29 +44,29 @@ Organized for clarity, separation of concerns, and ease of extension:
 
 ---
 
-## ✅ Current Features (Phase 1)
+## ✅ Current Features
 
-| Feature                        | Description                                    |
-| ------------------------------ | ---------------------------------------------- |
-| 🧱 Modular Project Structure   | Scalable and clean directory layout            |
-| 🔐 Secure CouchDB              | Uses credentials, no open dev DB               |
-| 🐳 Docker-Based Setup          | Mimics cloud infrastructure                    |
-| 🔑 JWT Authentication Skeleton | Industry-standard token-based security (setup) |
-| ⚙️ Configurable with .env      | Keeps secrets and URLs out of code             |
+| Feature                          | Description                                         |
+| -------------------------------- | --------------------------------------------------- |
+| 🧱 Modular Project Structure     | Scalable and clean directory layout                 |
+| 🔐 Secure CouchDB                | Uses credentials, no open dev DB                    |
+| 🐳 Docker-Based Setup            | Mimics cloud infrastructure                         |
+| 🔑 JWT Authentication Skeleton   | Token-based secure login and registration           |
+| ✍️ Feedback Submission API       | Authenticated users can submit feedback entries     |
+| 📜 Feedback Listing API          | List all feedbacks created by the logged-in user    |
+| 💾 CouchDB-Backed Feedback Store | Feedbacks saved and retrieved directly from CouchDB |
+| ⚙️ Configurable with .env        | Keeps secrets and URLs out of code                  |
 
 ---
-
 
 
 ## 📌 Why This Matters
 
 Even though it's a personal/POC-level project:
 
-* ✅ It mirrors **real-world system design**
-* 🔄 It’s **ready to evolve** with CI/CD, observability, etc.
-* 🧰 It shows your skills in **DevOps**, **security**, and **clean API design**
-
-
+* ✅ It mirrors **real-world backend engineering practices**
+* 🧱 Designed for **extension and team collaboration**
+* 🧰 Showcases your skill across **API design, security, DevOps, and database modeling**
+* 🧠 Highlights ability to integrate NoSQL with Python-based RESTful services
 
 ---
-
