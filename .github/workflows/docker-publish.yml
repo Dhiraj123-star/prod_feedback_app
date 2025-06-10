@@ -1,0 +1,28 @@
+name: CI/CD - Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - main  # or any branch you use
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      - name: Build Docker image
+        run: docker build -t dhiraj918106/prod_feedback_app:latest .
+
+      - name: Push to Docker Hub
+        run: docker push dhiraj918106/prod_feedback_app:latest
