@@ -9,53 +9,44 @@ A secure, scalable, and modular **FastAPI** application powered by **CouchDB**, 
 
 ## 🎯 Goal
 
-To create a feedback management backend system that follows modern engineering standards:
+To create a feedback management backend system that follows modern backend engineering standards:
 
 * 🧱 Clean, modular architecture
-* 🔐 Secure with JWT authentication
-* 🐳 Fully containerized using Docker
-* 🛡️ CouchDB with access protection
+* 🔐 JWT-based user authentication
+* 🐳 Fully containerized using Docker & Docker Compose
+* 🛡️ CouchDB with access control
+* 🔄 Seamless integration between CouchDB and relational feedback store
 
 ---
 
 ## 📦 Tech Stack
 
-* ⚡ **FastAPI** – Lightweight, high-performance web framework
-* 🗃️ **CouchDB** – Reliable NoSQL document database
-* 🐳 **Docker + Docker Compose** – Containerized setup
-* 🔑 **JWT** – Secure user authentication
+* ⚡ **FastAPI** – Modern, high-performance Python web framework
+* 🗃️ **CouchDB** – NoSQL document database for secure user storage
+* 🐳 **Docker + Docker Compose** – Local container orchestration
+* 🔑 **JWT Auth** – Secure token-based authentication
 * 📁 **.env** – Environment-based configuration
-* 🧪 **Modular Folder Design** – Easy to maintain and scale
+* 🧪 **Modular Project Structure** – Clean, scalable backend design
 
 ---
 
-## 🧱 Project Structure Overview
 
-Organized for clarity, separation of concerns, and ease of extension:
 
-* `app/` – All FastAPI logic (routes, models, config, utils)
-* `db/` – CouchDB integration
-* `routes/` – Auth and feedback APIs
-* `utils/` – JWT token utilities
-* `Dockerfile` & `docker-compose.yml` – Local containerization
-* `.env` – Secrets and config for local environment
-* `requirements.txt` – Python dependencies
+## ✅ Current Features
 
----
-
-## ✅ Current Features 
-
-| Feature                             | Description                                      |
-| ----------------------------------- | ------------------------------------------------ |
-| 🧱 Modular Project Structure        | Scalable and clean directory layout              |
-| 🔐 Secure CouchDB                   | Uses credentials, no open dev DB                 |
-| 🐳 Docker-Based Setup               | Mimics cloud infrastructure                      |
-| 🔑 JWT Authentication Skeleton      | Token-based secure login and registration        |
-| ✍️ Submit Feedback                  | Authenticated users can submit feedback entries  |
-| 📜 List Feedbacks                   | List all feedbacks created by the logged-in user |
-| ♻️ Update Feedback                  | Users can update their own feedback entries      |
-| ❌ Delete Feedback                  | Users can delete their own feedback entries     |
-| 💾 CouchDB-Backed Auth              | Secure user storage in CouchDB                   |
-| ⚙️ Configurable with .env           | Keeps secrets and URLs out of code               |
+| Feature                             | Description                                                  |
+| ----------------------------------- | ------------------------------------------------------------ |
+| 🧱 Modular Project Structure        | Clean, extensible architecture ideal for scaling             |
+| 🔐 Secure CouchDB                   | Stores user credentials securely (hashed)                    |
+| 🔑 JWT Authentication               | Users authenticate via secure tokens                         |
+| 🧑‍💼 User Registration & Login      | Register and login endpoints backed by CouchDB               |
+| ✍️ Submit Feedback                  | Authenticated users can submit feedback entries              |
+| 📜 List Feedbacks                   | List feedback entries owned by the logged-in user            |
+| ♻️ Update Feedback                  | Users can update their own feedback entries by ID            |
+| ❌ Delete Feedback                  | Users can delete their own feedback entries by ID            |
+| ⚙️ Configurable with .env           | Easily manage environment-specific variables and secrets     |
+| 🐳 Dockerized Local Development     | Run the full stack (FastAPI + CouchDB + SQLite) via Docker   |
+| 📤 CI/CD-Ready with GitHub Actions  | Supports automated Docker builds and Docker Hub deployment   |
 
 ---
+
